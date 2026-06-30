@@ -1,0 +1,146 @@
+<mxfile host="Electron" agent="Mozilla/5.0">
+  <diagram name="DFD" id="dfd-diagram">
+    <mxGraphModel dx="1178" dy="708" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ent_client" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=12;fontStyle=0" value="&lt;span&gt;Клиент&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="18" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_admin" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=12;fontStyle=0" value="&lt;span&gt;Администратор&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="18" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_cook" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=12;fontStyle=0" value="&lt;span&gt;Повар&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="10" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_cashier" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=12;fontStyle=0" value="&lt;span&gt;Кассир&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="10" y="494" as="geometry" />
+        </mxCell>
+        <mxCell id="proc_order" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;1.0&lt;/span&gt; Приём заказа" vertex="1">
+          <mxGeometry height="80" width="140" x="280" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="proc_menu" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;2.0&lt;/span&gt; Управление меню" vertex="1">
+          <mxGeometry height="80" width="140" x="280" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="proc_kitchen" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;3.0&lt;/span&gt; Обработка кухней" vertex="1">
+          <mxGeometry height="80" width="140" x="280" y="354" as="geometry" />
+        </mxCell>
+        <mxCell id="proc_payment" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;4.0&lt;/span&gt; Оплата заказа" vertex="1">
+          <mxGeometry height="80" width="140" x="280" y="484" as="geometry" />
+        </mxCell>
+        <mxCell id="proc_report" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;5.0&lt;/span&gt; Формирование отчётов" vertex="1">
+          <mxGeometry height="80" width="140" x="280" y="594" as="geometry" />
+        </mxCell>
+        <mxCell id="store_orders" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fontSize=11;fontStyle=0;" value="&lt;span&gt;D1&lt;/span&gt; Заказы" vertex="1">
+          <mxGeometry height="60" width="120" x="540" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="store_menu" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fontSize=11;fontStyle=0;" value="&lt;span&gt;D2&lt;/span&gt; Меню" vertex="1">
+          <mxGeometry height="60" width="120" x="730" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="store_users" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fontSize=11;fontStyle=0;" value="&lt;span&gt;D3&lt;/span&gt; Пользователи" vertex="1">
+          <mxGeometry height="60" width="120" x="730" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="store_payments" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;D4&lt;/span&gt; Платежи" vertex="1">
+          <mxGeometry height="60" width="120" x="540" y="414" as="geometry" />
+        </mxCell>
+        <mxCell id="store_reports" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;D5&lt;/span&gt; Отчёты" vertex="1">
+          <mxGeometry height="60" width="120" x="540" y="514" as="geometry" />
+        </mxCell>
+        <mxCell id="f1" edge="1" parent="1" source="ent_client" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontStyle=0" target="proc_order" value="Заказ">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f2" edge="1" parent="1" source="proc_menu" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontStyle=0" target="proc_order" value="Данные меню">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="350" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f3" edge="1" parent="1" source="proc_order" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontStyle=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.996;exitY=0.369;exitDx=0;exitDy=0;exitPerimeter=0;" target="store_orders" value="Информация о заказе">
+          <mxGeometry relative="1" x="-0.0087" y="-15" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f4" edge="1" parent="1" source="ent_admin" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontStyle=0" target="proc_menu" value="Позиции меню">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f5" edge="1" parent="1" source="proc_menu" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontStyle=0" target="store_menu" value="Обновлённое меню">
+          <mxGeometry relative="1" x="-0.2258" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f6" edge="1" parent="1" source="proc_menu" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontStyle=0" target="proc_kitchen" value="Заказ на кухню">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f7" edge="1" parent="1" source="ent_cook" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontStyle=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="proc_kitchen" value="Статус приготовления">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="263" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f8" edge="1" parent="1" source="proc_kitchen" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontStyle=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="store_orders" value="Обновлённый статус">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="394" />
+            </Array>
+            <mxPoint x="600" y="174" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f9" edge="1" parent="1" source="proc_kitchen" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontStyle=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="proc_payment" value="Данные для оплаты">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="350" y="434" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f10" edge="1" parent="1" source="proc_payment" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontStyle=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" target="proc_report" value="Оплата">
+          <mxGeometry relative="1" x="-0.1876" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="160" y="564" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f11" edge="1" parent="1" source="proc_payment" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontStyle=0" target="ent_cashier" value="Чек">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f12" edge="1" parent="1" source="proc_payment" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontStyle=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" target="store_payments" value="Данные платежа">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f13" edge="1" parent="1" source="proc_report" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontStyle=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="store_reports" value="Данные заказов">
+          <mxGeometry relative="1" x="0.2131" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="508" y="636" />
+              <mxPoint x="506" y="544" />
+            </Array>
+            <mxPoint x="517" y="714" as="sourcePoint" />
+            <mxPoint x="415" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f14" edge="1" parent="1" source="proc_report" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontStyle=0" target="ent_cashier" value="Отчёт">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="70" y="634" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f15" edge="1" parent="1" source="store_users" style="endArrow=classic;html=1;strokeWidth=1.5;strokeColor=#000000;fontStyle=0" target="proc_order" value="Данные пользователей">
+          <mxGeometry relative="1" x="0.4236" y="-2" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="700" y="310" />
+              <mxPoint x="700" y="190" />
+              <mxPoint x="470" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="legend" parent="1" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=none;strokeColor=#000000;fontSize=10;fontStyle=0" value="&lt;span&gt;Легенда DFD:&lt;/span&gt;&amp;nbsp;Внешняя сущность:&lt;div&gt;Процесс Хранилище данных - Поток данных&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="180" x="720" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="mX_TOC2S0J2179A80Jlj-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;font-size: 14px; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;Диаграмма потоков данных (DFD)&lt;/span&gt;&lt;div style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212));&quot;&gt;&amp;nbsp;Уровень 0 Система учёта заказов в ресторане&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="397" x="172" y="29" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

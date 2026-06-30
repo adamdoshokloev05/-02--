@@ -1,0 +1,87 @@
+<mxfile host="Electron" agent="Mozilla/5.0">
+  <diagram name="UseCase" id="usecase-diagram">
+    <mxGraphModel dx="1664" dy="999" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="system" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;Система учёта заказов в ресторане&lt;/span&gt;" vertex="1">
+          <mxGeometry height="870" width="270" x="330" y="40" as="geometry">
+            <mxRectangle height="30" width="290" x="280" y="80" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uc_manage_menu" parent="system" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=default;fontSize=11;fontColor=default;labelBackgroundColor=none;" value="Управление меню (добавление, редактирование, удаление позиций)" vertex="1">
+          <mxGeometry height="70" width="160" x="40" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_manage_users" parent="system" style="ellipse;whiteSpace=wrap;html=1;fillColor=default;strokeColor=default;fontSize=11;fontColor=default;labelBackgroundColor=none;" value="Управление пользователями (создание, редактирование, назначение ролей)" vertex="1">
+          <mxGeometry height="70" width="160" x="40" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_view_reports" parent="system" style="ellipse;whiteSpace=wrap;html=1;fillColor=default;strokeColor=default;fontSize=11;fontColor=default;labelBackgroundColor=none;" value="Просмотр отчётов (выручка, популярные блюда, загрузка)" vertex="1">
+          <mxGeometry height="70" width="160" x="40" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_view_kitchen" parent="system" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=default;fontSize=11;fontColor=default;labelBackgroundColor=none;" value="Просмотр заказов на кухне" vertex="1">
+          <mxGeometry height="60" width="160" x="40" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_update_status" parent="system" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=default;fontSize=11;fontColor=default;labelBackgroundColor=none;" value="Обновление статуса приготовления" vertex="1">
+          <mxGeometry height="60" width="160" x="40" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_payment" parent="system" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=default;fontSize=11;fontColor=default;labelBackgroundColor=none;" value="Оплата заказа (расчёт суммы, формирование чека)" vertex="1">
+          <mxGeometry height="70" width="160" x="40" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_apply_discount" parent="system" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=default;fontSize=11;fontColor=default;labelBackgroundColor=none;fontStyle=1" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;Применение скидок&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="160" x="40" y="636" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_create_order" parent="system" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=default;fontSize=11;fontColor=default;labelBackgroundColor=none;" value="Создание заказа (выбор позиций, количество)" vertex="1">
+          <mxGeometry height="70" width="160" x="40" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_edit_order" parent="system" style="ellipse;whiteSpace=wrap;html=1;fillColor=default;strokeColor=default;fontSize=11;fontColor=default;labelBackgroundColor=none;" value="Редактирование заказа (изменение состава, отмена)" vertex="1">
+          <mxGeometry height="70" width="160" x="40" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="uc_change_status" parent="system" style="ellipse;whiteSpace=wrap;html=1;fillColor=default;strokeColor=default;fontSize=11;fontColor=default;labelBackgroundColor=none;" value="Изменение статуса (принят, готовится, готов, выдан)" vertex="1">
+          <mxGeometry height="70" width="160" x="40" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_admin" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;strokeColor=default;" value="&lt;b&gt;Администратор&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="40" x="90" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc1" edge="1" parent="1" source="actor_admin" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=default;" target="uc_manage_menu" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc2" edge="1" parent="1" source="actor_admin" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=default;" target="uc_manage_users" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc3" edge="1" parent="1" source="actor_admin" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=default;" target="uc_view_reports" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_waiter" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;strokeColor=default;" value="Официант" vertex="1">
+          <mxGeometry height="80" width="40" x="100" y="435" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc6" edge="1" parent="1" source="actor_waiter" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=default;" target="uc_change_status" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc5" edge="1" parent="1" source="actor_waiter" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=default;" target="uc_edit_order" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc4" edge="1" parent="1" source="actor_waiter" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=default;" target="uc_create_order" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_cashier" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;strokeColor=default;" value="Кассир" vertex="1">
+          <mxGeometry height="80" width="40" x="100" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc7" edge="1" parent="1" source="actor_cashier" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=default;fontColor=default;labelBackgroundColor=none;" target="uc_payment" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc8" edge="1" parent="1" source="actor_cashier" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=default;" target="uc_apply_discount" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="actor_cook" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=none;strokeColor=default;" value="Повар" vertex="1">
+          <mxGeometry height="80" width="40" x="100" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc9" edge="1" parent="1" source="actor_cook" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=default;" target="uc_view_kitchen" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="assoc10" edge="1" parent="1" source="actor_cook" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=default;" target="uc_update_status" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

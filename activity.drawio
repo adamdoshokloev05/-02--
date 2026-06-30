@@ -1,0 +1,118 @@
+<mxfile host="Electron" agent="Mozilla/5.0">
+  <diagram name="Activity" id="activity-diagram">
+    <mxGraphModel dx="1414" dy="849" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="swimlane_waiter" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=default;strokeColor=default;fontSize=13;fontStyle=0;gradientColor=none;swimlaneFillColor=none;" value="&lt;span&gt;Официант&lt;/span&gt;" vertex="1">
+          <mxGeometry height="720" width="320" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="swimlane_waiter" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontStyle=0" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="135" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="act_take_order" parent="swimlane_waiter" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;Принять заказ&lt;/span&gt; от клиента" vertex="1">
+          <mxGeometry height="60" width="140" x="80" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="act_enter_order" parent="swimlane_waiter" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;Ввести заказ&lt;/span&gt; в систему" vertex="1">
+          <mxGeometry height="60" width="140" x="80" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="act_wait_ready" parent="swimlane_waiter" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;Ожидать&lt;/span&gt; готовности" vertex="1">
+          <mxGeometry height="60" width="140" x="80" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="act_serve" parent="swimlane_waiter" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;Подать заказ&lt;/span&gt; клиенту" vertex="1">
+          <mxGeometry height="60" width="140" x="80" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="swimlane_system" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=default;strokeColor=default;fontSize=13;fontStyle=0;gradientColor=none;swimlaneFillColor=none;" value="&lt;span&gt;Система&lt;/span&gt;" vertex="1">
+          <mxGeometry height="720" width="320" x="380" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act_save_order" parent="swimlane_system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;Сохранить&lt;/span&gt; заказ в БД" vertex="1">
+          <mxGeometry height="60" width="140" x="80" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="act_calc" parent="swimlane_system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;Рассчитать&lt;/span&gt; стоимость" vertex="1">
+          <mxGeometry height="60" width="140" x="80" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="act_send_kitchen" parent="swimlane_system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;Отправить заказ&lt;/span&gt; на кухню" vertex="1">
+          <mxGeometry height="60" width="140" x="80" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="act_update_status" parent="swimlane_system" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;Обновить&lt;/span&gt; статус заказа" vertex="1">
+          <mxGeometry height="60" width="140" x="80" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="decision" parent="swimlane_system" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;Оплата&lt;/span&gt; сразу?" vertex="1">
+          <mxGeometry height="60" width="100" x="100" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="swimlane_kitchen" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=default;strokeColor=default;fontSize=13;fontStyle=0;gradientColor=none;swimlaneFillColor=none;" value="&lt;span&gt;Кухня (Повар)&lt;/span&gt;" vertex="1">
+          <mxGeometry height="720" width="320" x="720" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act_receive" parent="swimlane_kitchen" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;Получить&lt;/span&gt; заказ" vertex="1">
+          <mxGeometry height="60" width="140" x="80" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="act_cook" parent="swimlane_kitchen" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;Приготовить&lt;/span&gt; блюда" vertex="1">
+          <mxGeometry height="60" width="140" x="80" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="act_notify" parent="swimlane_kitchen" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;Уведомить&lt;/span&gt; о готовности" vertex="1">
+          <mxGeometry height="60" width="140" x="80" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="swimlane_cashier" parent="1" style="swimlane;whiteSpace=wrap;html=1;fillColor=default;strokeColor=default;fontSize=13;fontStyle=0;gradientColor=none;swimlaneFillColor=none;" value="&lt;span&gt;Кассир&lt;/span&gt;" vertex="1">
+          <mxGeometry height="720" width="280" x="1070" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="act_payment" parent="swimlane_cashier" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;Принять&lt;/span&gt; оплату" vertex="1">
+          <mxGeometry height="60" width="140" x="60" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="act_check" parent="swimlane_cashier" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;Сформировать&lt;/span&gt; чек" vertex="1">
+          <mxGeometry height="60" width="140" x="60" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="act_close" parent="swimlane_cashier" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;fontSize=11;fontStyle=0" value="&lt;span&gt;Закрыть&lt;/span&gt; заказ" vertex="1">
+          <mxGeometry height="60" width="140" x="60" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="swimlane_cashier" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;strokeWidth=1;fontStyle=0" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="115" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" edge="1" parent="1" source="start" style="endArrow=classic;html=1;strokeWidth=1.5;fontStyle=0" target="act_take_order" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" edge="1" parent="1" source="act_take_order" style="endArrow=classic;html=1;strokeWidth=1.5;fontStyle=0" target="act_enter_order" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" edge="1" parent="1" source="act_enter_order" style="endArrow=classic;html=1;strokeWidth=1.5;fontStyle=0" target="act_save_order" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" edge="1" parent="1" source="act_save_order" style="endArrow=classic;html=1;strokeWidth=1.5;fontStyle=0" target="act_calc" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" edge="1" parent="1" source="act_calc" style="endArrow=classic;html=1;strokeWidth=1.5;fontStyle=0" target="act_payment" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t6" edge="1" parent="1" source="act_payment" style="endArrow=classic;html=1;strokeWidth=1.5;fontStyle=0" target="act_check" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t7" edge="1" parent="1" source="act_check" style="endArrow=classic;html=1;strokeWidth=1.5;fontStyle=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="act_receive" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t8" edge="1" parent="1" source="act_send_kitchen" style="endArrow=classic;html=1;strokeWidth=1.5;fontStyle=0" target="act_receive" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t9" edge="1" parent="1" source="act_receive" style="endArrow=classic;html=1;strokeWidth=1.5;fontStyle=0" target="act_cook" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t10" edge="1" parent="1" source="act_cook" style="endArrow=classic;html=1;strokeWidth=1.5;fontStyle=0" target="act_notify" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t11" edge="1" parent="1" source="act_notify" style="endArrow=classic;html=1;strokeWidth=1.5;fontStyle=0" target="act_update_status" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t12" edge="1" parent="1" source="act_update_status" style="endArrow=classic;html=1;strokeWidth=1.5;fontStyle=0" target="act_wait_ready" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t13" edge="1" parent="1" source="act_wait_ready" style="endArrow=classic;html=1;strokeWidth=1.5;fontStyle=0" target="act_serve" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t14" edge="1" parent="1" source="act_serve" style="endArrow=classic;html=1;strokeWidth=1.5;fontStyle=0" target="act_close" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="t15" edge="1" parent="1" source="act_close" style="endArrow=classic;html=1;strokeWidth=1.5;fontStyle=0" target="end" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
